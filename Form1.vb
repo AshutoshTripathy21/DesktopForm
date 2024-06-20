@@ -291,7 +291,7 @@ Public Class Form1
         Dim btnNext As New Button()
         btnNext.Text = "Next"
         btnNext.Location = New Point(200, 220)
-        btnNext.BackColor = Color.Yellow ' Yellow background for navigation buttons
+        btnNext.BackColor = Color.LightBlue ' Yellow background for navigation buttons
         btnNext.ForeColor = Color.Black ' Black text
         btnNext.Font = New Font("Arial", 10, FontStyle.Bold) ' Larger font
         btnNext.Size = New Size(100, 30) ' Larger size
