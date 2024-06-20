@@ -1,4 +1,4 @@
-﻿Imports System.Net.Http
+Imports System.Net.Http
 Imports Newtonsoft.Json
 Imports System.Text
 Imports System.Diagnostics
@@ -16,28 +16,28 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Me.Text = "SlidelyAI Task-2"
-        Me.Size = New Size(600, 500) ' Adjusted form size
+        Me.Text = "Ashutosh Tripathy SSlidelyAI Task-2"
+        Me.Size = New Size(800, 600) ' Adjusted form size
 
         ' Create New Submission button
         Dim btnCreateNewSubmission As New Button()
         btnCreateNewSubmission.Text = "Create New Submission"
         btnCreateNewSubmission.Location = New Point(50, 50)
-        btnCreateNewSubmission.BackColor = Color.Blue ' Blue background
-        btnCreateNewSubmission.ForeColor = Color.White ' White text
+        btnCreateNewSubmission.BackColor = Color.LightBlue ' Blue background
+        btnCreateNewSubmission.ForeColor = Color.Black ' White text
         btnCreateNewSubmission.Font = New Font("Arial", 12, FontStyle.Bold) ' Larger font
-        btnCreateNewSubmission.Size = New Size(300, 50) ' Larger size
+        btnCreateNewSubmission.Size = New Size(400, 70) ' Larger size
         AddHandler btnCreateNewSubmission.Click, AddressOf btnCreateNewSubmission_Click
         Me.Controls.Add(btnCreateNewSubmission)
 
         ' View Submissions button
         Dim btnViewSubmissions As New Button()
         btnViewSubmissions.Text = "View Submissions"
-        btnViewSubmissions.Location = New Point(50, 120) ' Increased vertical spacing
+        btnViewSubmissions.Location = New Point(50, 150) ' Increased vertical spacing
         btnViewSubmissions.BackColor = Color.Yellow ' Yellow background
         btnViewSubmissions.ForeColor = Color.Black ' Black text
         btnViewSubmissions.Font = New Font("Arial", 12, FontStyle.Bold) ' Larger font
-        btnViewSubmissions.Size = New Size(300, 50) ' Larger size
+        btnViewSubmissions.Size = New Size(400, 70) ' Larger size
         AddHandler btnViewSubmissions.Click, AddressOf btnViewSubmissions_Click
         Me.Controls.Add(btnViewSubmissions)
 
@@ -57,8 +57,8 @@ Public Class Form1
 
     Private Sub btnCreateNewSubmission_Click(sender As Object, e As EventArgs)
         Dim createSubmissionForm As New Form()
-        createSubmissionForm.Text = "Create New Submission"
-        createSubmissionForm.Size = New Size(400, 300)
+        createSubmissionForm.Text = "Ashutosh Tripathy Slidely Task-2 Create New Submission"
+        createSubmissionForm.Size = New Size(600, 500) ' Increased form size
 
         Dim lblName As New Label()
         lblName.Text = "Name:"
@@ -106,7 +106,7 @@ Public Class Form1
         createSubmissionForm.Controls.Add(lblStopwatchTime)
 
         Dim txtStopwatchTime As New TextBox()
-        txtStopwatchTime.Location = New Point(150, 180)
+        txtStopwatchTime.Location = New Point(200, 180)
         txtStopwatchTime.ReadOnly = True
         txtStopwatchTime.BackColor = Color.LightGray ' Light gray background for read-only text boxes
         txtStopwatchTime.Font = New Font("Arial", 10) ' Larger font
@@ -115,6 +115,10 @@ Public Class Form1
         Dim btnToggleStopwatchInForm As New Button()
         btnToggleStopwatchInForm.Text = "Toggle Stopwatch"
         btnToggleStopwatchInForm.Location = New Point(150, 220)
+        btnToggleStopwatchInForm.BackColor = Color.Yellow ' Yellow background
+        btnToggleStopwatchInForm.ForeColor = Color.Black ' Black text
+        btnToggleStopwatchInForm.Font = New Font("Arial", 12, FontStyle.Bold) ' Larger font
+        btnToggleStopwatchInForm.Size = New Size(200, 50) ' Larger size
         AddHandler btnToggleStopwatchInForm.Click, Sub()
                                                        If stopwatch.IsRunning Then
                                                            stopwatch.Stop()
@@ -128,11 +132,11 @@ Public Class Form1
 
         Dim btnSubmit As New Button()
         btnSubmit.Text = "Submit"
-        btnSubmit.Location = New Point(250, 220)
+        btnSubmit.Location = New Point(400, 220)
         btnSubmit.BackColor = Color.Blue ' Blue background for submit button
         btnSubmit.ForeColor = Color.White ' White text
         btnSubmit.Font = New Font("Arial", 12, FontStyle.Bold) ' Larger font
-        btnSubmit.Size = New Size(100, 40) ' Larger size
+        btnSubmit.Size = New Size(150, 50) ' Larger size
         AddHandler btnSubmit.Click, Sub()
                                         If String.IsNullOrEmpty(txtName.Text) OrElse
                                            String.IsNullOrEmpty(txtEmail.Text) OrElse
@@ -179,10 +183,6 @@ Public Class Form1
                                             MessageBox.Show("Error: " & ex.Message)
                                         End Try
                                     End Sub
-        btnSubmit.BackColor = Color.Blue ' Blue background for submit button
-        btnSubmit.ForeColor = Color.White ' White text
-        btnSubmit.Font = New Font("Arial", 12, FontStyle.Bold) ' Larger font
-        btnSubmit.Size = New Size(100, 40) ' Larger size
         createSubmissionForm.Controls.Add(btnSubmit)
 
         ' Start the stopwatch when the form is shown
@@ -216,8 +216,8 @@ Public Class Form1
         End If
 
         Dim viewSubmissionForm As New Form()
-        viewSubmissionForm.Text = "View Submissions"
-        viewSubmissionForm.Size = New Size(400, 300)
+        viewSubmissionForm.Text = "Ashutosh Tripathy Slidely Task-2 View Submission"
+        viewSubmissionForm.Size = New Size(600, 400) ' Increased form size
 
         Dim lblName As New Label()
         lblName.Text = "Name:"
